@@ -11,6 +11,7 @@ function loadExternalResource(url, type) {
 			tag = document.createElement("link");
 			tag.rel = "stylesheet";
 			tag.href = url;
+			tag.id = "live2d_css";
 		}
 		else if (type === "js") {
 			tag = document.createElement("script");
