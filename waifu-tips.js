@@ -153,13 +153,13 @@ function loadWidget(config) {
 		} else if (document.referrer !== "") {
 			const referrer = new URL(document.referrer),
 				domain = referrer.hostname.split(".")[1];
-			if (location.hostname === referrer.hostname) text = `歡迎閱讀<span>「${document.title.split(" - ")[0]}」</span> ⎝( OωO)⎠`;
+			if (location.hostname === referrer.hostname) text = `歡迎閱讀<span>「${document.title.split(" - ")[0]}」</span><br> ⎝( OωO)⎠`;
 			else if (domain === "baidu") text = `Hello！来自 百度搜索 的朋友<br>你是搜索 <span>${referrer.search.split("&wd=")[1].split("&")[0]}</span> 找到的我吗？`;
 			else if (domain === "so") text = `Hello！来自 360搜索 的朋友<br>你是搜索 <span>${referrer.search.split("&q=")[1].split("&")[0]}</span> 找到的我吗？`;
-			else if (domain === "google") text = `Hello！来自 Google搜索的 的朋友<br>歡迎閱讀<span>「${document.title.split(" - ")[0]}」</span> ⎝( OωO)⎠`;
+			else if (domain === "google") text = `Hello！来自 Google搜索的 的朋友<br>歡迎閱讀<span>「${document.title.split(" - ")[0]}」</span><br> ⎝( OωO)⎠`;
 			else text = `Hello！来自 <span>${referrer.hostname}</span> 的朋友 ⎝( OωO)⎠`;
 		} else {
-			text = `歡迎閱讀<span>「${document.title.split(" - ")[0]}」</span> ⎝( OωO)⎠`;
+			text = `歡迎閱讀<span>「${document.title.split(" - ")[0]}」</span><br> ⎝( OωO)⎠`;
 		}
 		showMessage(text, 7000, 8);
 	})();
